@@ -40,6 +40,8 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+
+    const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
     
 document.addEventListener("DOMContentLoaded", function () {
  
@@ -54,7 +56,7 @@ const limit = 10;
 
 function fetchData(page = 1) {
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/user_location_update.php";
+    const apiUrl = BASE_API_URL + "/user_location_update.php";
 
     const container = document.getElementById("offlineOtpTableBody");
 
@@ -185,7 +187,7 @@ function changeStatus(id, isChecked) {
     const status = isChecked ? 1 : 0;
     console.log(`ID: ${id}, New Status: ${status}`);
 
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/user_location_update.php";
+     const apiUrl = BASE_API_URL + "/user_location_update.php";
 
     const formData = new FormData();
     formData.append("id", id);
@@ -229,7 +231,7 @@ function approveAlert(alertId,userId) {
       redirect: "follow"
     };
     // 👉 Later: add API call to update status
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/user_location_update.php";
+    const apiUrl = BASE_API_URL + "/user_location_update.php";
     
     if (confirm("Do you want to approve the request?")) {
     
@@ -279,7 +281,7 @@ function rejectAlert(alertId, userId) {
         redirect: "follow"
     };
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/user_location_update.php";
+    const apiUrl = BASE_API_URL + "/user_location_update.php";
 
     // 🔥 Step 3: API call
     fetch(apiUrl, requestOptions)

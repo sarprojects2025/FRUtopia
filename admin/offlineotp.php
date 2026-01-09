@@ -43,6 +43,8 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
+
 document.addEventListener("DOMContentLoaded", function() {
     fetchData();
 });
@@ -53,7 +55,7 @@ const limit = 25;
 
 function fetchData(page = 1) {
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/offlineotp.php";
+    const apiUrl = BASE_API_URL + "/offlineotp.php";
     // const apiUrl = "http://localhost/frutopia/api/offlineotp.php";
     const container = document.getElementById("offlineOtpTableBody");
 

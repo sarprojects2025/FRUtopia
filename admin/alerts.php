@@ -15,6 +15,10 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
+
+// console.log(BASE_API_URL);
+
 document.addEventListener("DOMContentLoaded", function () {
     fetchData();
 });
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 setInterval(fetchData, 20000);
 
 function fetchData() {
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/get_alert_list.php";
+    const apiUrl = BASE_API_URL + "/get_alert_list.php";
     const container = document.getElementById("alertTable");
     const exportBtn = document.getElementById("exportBtn");
     
@@ -151,7 +155,7 @@ function approveAlert(alertId,userId) {
       redirect: "follow"
     };
     // 👉 Later: add API call to update status
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/update_alertstatus.php";
+    const apiUrl = BASE_API_URL + "/update_alertstatus.php";
     
     if (confirm("Do you want to approve the request?")) {
     

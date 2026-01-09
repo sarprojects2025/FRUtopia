@@ -25,8 +25,9 @@
 <?php include('./footer.php'); ?>
 
 <script>
+  const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/get_users.php";
+    const apiUrl = BASE_API_URL + "/get_users.php";
     const container = document.getElementById("alertTable");
     const exportBtn = document.getElementById("exportBtn");
 

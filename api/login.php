@@ -1,5 +1,7 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'].'/FRUtopia/api/config/config.php');
+// include($_SERVER['DOCUMENT_ROOT'].'/FRUtopia/api/config/config.php');
+include(__DIR__ . '/config/config.php');
+
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json'); 
 

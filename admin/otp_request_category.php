@@ -61,6 +61,9 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+
+    const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
+
 document.addEventListener("DOMContentLoaded", function() {
     fetchData();
 });
@@ -93,7 +96,7 @@ save_otpcategory_btn.addEventListener("click", function() {
         return;
     }
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/otp_request_category.php";
+    const apiUrl = BASE_API_URL + "/otp_request_category.php";
     // const apiUrl = "http://localhost/frutopia/api/otp_request_category.php";
 
 
@@ -126,7 +129,7 @@ save_otpcategory_btn.addEventListener("click", function() {
 
 
 function fetchData() {
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/otp_request_category.php";
+    const apiUrl = BASE_API_URL + "/otp_request_category.php";
     // const apiUrl = "http://localhost/frutopia/api/otp_request_category.php";
 
 
@@ -185,7 +188,7 @@ function changeStatus(id, isChecked) {
     const status = isChecked ? 1 : 0;
     console.log(`ID: ${id}, New Status: ${status}`);
 
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/otp_request_category.php";
+     const apiUrl = BASE_API_URL + "/otp_request_category.php";
     // const apiUrl = "http://localhost/frutopia/api/otp_request_category.php";
 
     const formData = new FormData();
@@ -216,7 +219,7 @@ function changeStatus(id, isChecked) {
 
 function editData(id) {
     
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/otp_request_category.php";
+    const apiUrl = BASE_API_URL + "/otp_request_category.php";
     // const apiUrl = "http://localhost/frutopia/api/otp_request_category.php";
 
     const formData = new FormData();
@@ -262,7 +265,7 @@ function updateBranch(id) {
         return;
     }
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/otp_request_category.php";
+    const apiUrl = BASE_API_URL + "/otp_request_category.php";
     // const apiUrl = "http://localhost/frutopia/api/otp_request_category.php";
 
     // ✅ Create FormData object

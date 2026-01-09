@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit();
 }
 
-include($_SERVER['DOCUMENT_ROOT'] . '/FRUtopia/api/config/config.php');
+// include($_SERVER['DOCUMENT_ROOT'] . '/FRUtopia/api/config/config.php');
+include(__DIR__ . '/config/config.php');
 header('Content-Type: application/json');
 
 

@@ -20,6 +20,9 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
+// console.log(<?php echo BASE_API_URL; ?>);
+
 document.addEventListener("DOMContentLoaded", function () {
     fetchData();
     
@@ -29,7 +32,7 @@ setInterval(fetchData, 20000);
 // setInterval(autoreject, 60000); // 60000ms = 1 minute
 
 function fetchData() {
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/get_today_alert_list.php";
+    const apiUrl = BASE_API_URL + "/get_today_alert_list.php";
     const container = document.getElementById("alertTable");
     const exportBtn = document.getElementById("exportBtn");
     
@@ -184,7 +187,7 @@ function approveAlert(alertId,userId) {
       redirect: "follow"
     };
     // 👉 Later: add API call to update status
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/update_alertstatus.php";
+    const apiUrl = BASE_API_URL + "/update_alertstatus.php";
     
     if (confirm("Do you want to approve the request?")) {
     
@@ -264,7 +267,7 @@ function rejectAlert(alertId, userId) {
         redirect: "follow"
     };
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/update_alertstatus.php";
+    const apiUrl = BASE_API_URL + "/update_alertstatus.php";
 
     // 🔥 Step 3: API call
     fetch(apiUrl, requestOptions)
@@ -291,7 +294,7 @@ function autoreject(){
     };
     
     // 👉 Later: add API call to update status
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/alert_auto_reject.php";
+    const apiUrl = BASE_API_URL + "/alert_auto_reject.php";
     fetch(apiUrl,requestOptions)
             .then(response => response.text())
             .then(data => {

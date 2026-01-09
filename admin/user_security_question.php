@@ -61,6 +61,8 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
+    
 document.addEventListener("DOMContentLoaded", function() {
     fetchData();
 });
@@ -93,7 +95,7 @@ save_question_btn.addEventListener("click", function() {
         return;
     }
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/user_security_question.php";
+    const apiUrl = BASE_API_URL + "/user_security_question.php";
    // const apiUrl = "http://localhost/frutopia/api/user_security_question.php";
 
 
@@ -126,7 +128,7 @@ save_question_btn.addEventListener("click", function() {
 
 
 function fetchData() {
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/user_security_question.php";
+     const apiUrl = BASE_API_URL + "/user_security_question.php";
     //const apiUrl = "http://localhost/frutopia/api/user_security_question.php";
 
 
@@ -185,7 +187,7 @@ function changeStatus(id, isChecked) {
     const status = isChecked ? 1 : 0;
     console.log(`ID: ${id}, New Status: ${status}`);
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/user_security_question.php";
+    const apiUrl = BASE_API_URL + "/user_security_question.php";
     //const apiUrl = "http://localhost/frutopia/api/user_security_question.php";
 
     const formData = new FormData();
@@ -216,7 +218,7 @@ function changeStatus(id, isChecked) {
 
 function editData(id) {
     
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/user_security_question.php";
+     const apiUrl = BASE_API_URL + "/user_security_question.php";
    // const apiUrl = "http://localhost/frutopia/api/user_security_question.php";
 
     const formData = new FormData();
@@ -262,7 +264,7 @@ function updateBranch(id) {
         return;
     }
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/user_security_question.php";
+    const apiUrl = BASE_API_URL + "/user_security_question.php";
    // const apiUrl = "http://localhost/frutopia/api/user_security_question.php";
 
     // ✅ Create FormData object

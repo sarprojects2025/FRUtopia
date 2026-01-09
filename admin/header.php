@@ -7,6 +7,8 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+include(__DIR__ . '/baseurl.php');
+
 ?>
 
 

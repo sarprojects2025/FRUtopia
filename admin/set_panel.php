@@ -66,6 +66,8 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+
+    const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
     
 document.addEventListener("DOMContentLoaded", function () {
     fetchUserData();
@@ -80,7 +82,7 @@ const limit = 25;
 
 function fetchData(page = 1) {
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/user_set_panel.php";
+    const apiUrl = BASE_API_URL + "/user_set_panel.php";
     // const apiUrl = "http://localhost/frutopia/api/user_set_panel.php";
     const container = document.getElementById("offlineOtpTableBody");
 
@@ -174,7 +176,7 @@ function changeStatus(id, isChecked) {
     const status = isChecked ? 1 : 0;
     console.log(`ID: ${id}, New Status: ${status}`);
 
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/user_set_panel.php";
+     const apiUrl = BASE_API_URL + "/user_set_panel.php";
     // const apiUrl = "http://localhost/frutopia/api/otp_request_category.php";
 
     const formData = new FormData();
@@ -205,7 +207,7 @@ function changeStatus(id, isChecked) {
 
 
 function fetchUserData() {
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/get_users.php";
+    const apiUrl = BASE_API_URL + "/get_users.php";
     const container = document.getElementById("userData");
     
     var user_id = <?php echo $_user_id; ?>;
@@ -245,7 +247,7 @@ function fetchUserData() {
 }
 
 function fetchPanelData() {
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/get_panel_list.php";
+    const apiUrl = BASE_API_URL + "/get_panel_list.php";
     const container = document.getElementById("panelData");
     
     var user_id = <?php echo $_user_id; ?>;
@@ -304,7 +306,7 @@ function setPanel(created_by) {
           redirect: "follow"
         };
         // 👉 Later: add API call to update status
-        const apiUrl = "https://sarsspl.com/FRUtopia/api/set_user_panel_id.php";
+        const apiUrl = BASE_API_URL + "/set_user_panel_id.php";
         
         if (confirm("Do you want to set the panel to this user?")) {
         

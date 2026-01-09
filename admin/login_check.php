@@ -1,11 +1,13 @@
 <?php
 session_start();
+include(__DIR__ . '/baseurl.php');
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    $url = "https://sarsspl.com/FRUtopia/api/admin_login.php";
+    $url = BASE_API_URL . "/admin_login.php";
 
     $postFields = http_build_query([
         "email_id" => $email,

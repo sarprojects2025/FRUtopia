@@ -109,7 +109,7 @@ document.getElementById("signup_request_btn").addEventListener("click", function
     formData.append("signup_request_user", "1");
 
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/lead_details.php";
+    const apiUrl = BASE_API_URL + "/lead_details.php";
     // const apiUrl = "http://localhost/frutopia/api/lead_details.php";
 
     const requestOptions = {
@@ -148,7 +148,7 @@ function fetchData() {
     const formData = new FormData();
     formData.append("get_signup_request_list", "1");
 
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/lead_details.php";
+    const apiUrl = BASE_API_URL + "/lead_details.php";
     // const apiUrl = "http://localhost/frutopia/api/lead_details.php";
 
     fetch(apiUrl, {
@@ -206,7 +206,7 @@ function approveRequest(requestId) {
         formdata.append("status", 1); // 1 for acceptance
         formdata.append("update_signup_request_status", "1");
 
-        const apiUrl = "https://sarsspl.com/FRUtopia/api/lead_details.php";
+        const apiUrl = BASE_API_URL + "/lead_details.php";
         // const apiUrl = "http://localhost/frutopia/api/lead_details.php";
 
 
@@ -249,7 +249,7 @@ function rejectRequest(requestId) {
         formdata.append("remark", remark);
         formdata.append("update_signup_request_status", "1");
 
-        const apiUrl = "https://sarsspl.com/FRUtopia/api/lead_details.php";
+        const apiUrl = BASE_API_URL + "/lead_details.php";
         // const apiUrl = "http://localhost/frutopia/api/lead_details.php";
 
 
@@ -271,7 +271,7 @@ function rejectRequest(requestId) {
 }
 
 function fetchBranchData() {
-    const apiUrl = "https://sarsspl.com/FRUtopia/api/branch.php";
+    const apiUrl = BASE_API_URL + "/branch.php";
     // const apiUrl = "http://localhost/frutopia/api/branch.php";
     const container = document.getElementById("leadBranch");
 

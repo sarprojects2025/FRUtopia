@@ -79,6 +79,8 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
+
 document.addEventListener("DOMContentLoaded", function() {
     fetchData();
     fetchBranchData();
@@ -97,7 +99,7 @@ document.getElementById("lead_save_btn").addEventListener("click", function() {
         return;
     }
 
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/lead_details.php";
+     const apiUrl = BASE_API_URL + "/lead_details.php";
    // const apiUrl = "http://localhost/frutopia/api/lead_details.php";
 
 
@@ -140,7 +142,7 @@ document.getElementById("lead_save_btn").addEventListener("click", function() {
 
 
 function fetchData() {
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/lead_details.php";
+     const apiUrl = BASE_API_URL + "/lead_details.php";
    // const apiUrl = "http://localhost/frutopia/api/lead_details.php";
 
     const container = document.getElementById("leadTableBody");
@@ -187,7 +189,7 @@ function fetchData() {
 }
 
 function fetchBranchData() {
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/branch.php";
+     const apiUrl = BASE_API_URL + "/branch.php";
   //  const apiUrl = "http://localhost/frutopia/api/branch.php";
     const container = document.getElementById("leadBranch");
 

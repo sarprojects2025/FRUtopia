@@ -1,6 +1,8 @@
 <?php 
 
-header("Location: https://sarsspl.com/FRUtopia/admin/today_alerts.php");
+// header("Location: https://sarsspl.com/FRUtopia/admin/today_alerts.php");
+// header('Location: https://' . $_SERVER['HTTP_HOST'] . '/FRUtopia/admin/today_alerts.php');
+header('Location: http://192.168.10.25/FRUtopia/admin/today_alerts.php');
 exit();
 include('./header.php'); 
 

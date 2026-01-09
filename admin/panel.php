@@ -65,6 +65,8 @@ $_user_id = $_SESSION['user_id'];
 <?php include('./footer.php'); ?>
 
 <script>
+const BASE_API_URL = "<?php echo BASE_API_URL; ?>";
+
 document.addEventListener("DOMContentLoaded", function() {
     fetchData();
 });
@@ -99,7 +101,7 @@ save_panel_btn.addEventListener("click", function() {
         return;
     }
 
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/panel.php";
+     const apiUrl = BASE_API_URL + "/panel.php";
    // const apiUrl = "http://localhost/frutopia/api/panel.php";
 
 
@@ -133,7 +135,7 @@ save_panel_btn.addEventListener("click", function() {
 
 
 function fetchData() {
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/panel.php";
+     const apiUrl = BASE_API_URL + "/panel.php";
    // const apiUrl = "http://localhost/frutopia/api/panel.php";
 
 
@@ -181,7 +183,7 @@ function fetchData() {
 
 function editData(id) {
     
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/panel.php";
+     const apiUrl = BASE_API_URL + "/panel.php";
     //const apiUrl = "http://localhost/frutopia/api/panel.php";
 
     const formData = new FormData();
@@ -227,7 +229,7 @@ function updateBranch(id) {
         return;
     }
 
-     const apiUrl = "https://sarsspl.com/FRUtopia/api/panel.php";
+     const apiUrl = BASE_API_URL + "/panel.php";
    // const apiUrl = "http://localhost/frutopia/api/panel.php";
 
     // ✅ Create FormData object

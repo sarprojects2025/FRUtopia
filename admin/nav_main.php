@@ -1,7 +1,7 @@
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
     <div class="m-header">
-      <a href="https://sarsspl.com/FRUtopia/admin/alerts.php" class="b-brand text-primary">
+      <a href="./today_alertsss.php" class="b-brand text-primary">
 
         <img src="https://sarsspl.com/assets/images/logo/headlogo.png" class="img-fluid logo-lg" alt="logo" />
       </a>

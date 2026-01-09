@@ -1303,7 +1303,7 @@ CREATE TABLE `branch_details` (
   `branch_name` varchar(200) DEFAULT NULL,
   `created_at` varchar(120) DEFAULT NULL,
   `updated_at` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `branch_details`
@@ -3091,7 +3091,7 @@ CREATE TABLE `user_lead_details` (
   `branch_id` int(11) DEFAULT NULL,
   `created_at` varchar(120) DEFAULT NULL,
   `updated_at` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `user_lead_details`
@@ -3367,7 +3367,7 @@ CREATE TABLE `user_signup_request` (
   `remark` text DEFAULT NULL,
   `created_at` varchar(120) DEFAULT NULL,
   `updated_at` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `user_signup_request`

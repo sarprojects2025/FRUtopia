@@ -1,7 +1,11 @@
 <?php 
 
-include($_SERVER['DOCUMENT_ROOT'] . '/FRUtopia/api/config/db_connection.php');
-include($_SERVER['DOCUMENT_ROOT'] . '/FRUtopia/api/aesCryptodecrypt.php');
+// include($_SERVER['DOCUMENT_ROOT'] . '/FRUtopia/api/config/db_connection.php');
+include(__DIR__ . '/config/db_connection.php');
+
+// include($_SERVER['DOCUMENT_ROOT'] . '/FRUtopia/api/aesCryptodecrypt.php');
+include(__DIR__ . '/api/aesCryptodecrypt.php');
+
 // header('Access-Control-Allow-Origin: *');
 // header('Content-Type: application/json');
 
