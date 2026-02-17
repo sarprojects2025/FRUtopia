@@ -2,9 +2,9 @@
 
 date_default_timezone_set("Asia/Kolkata");
 
-$username = "u444388293_frutopia";
-$db = "u444388293_frutopia";
-$password = "SarSoft@2025#";
+$username = "fruuser";
+$db = "frutopia";
+$password = "frupass";
 $host = "localhost";
 //$host = '89.116.138.57';
 
